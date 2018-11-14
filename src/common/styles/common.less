@@ -1,0 +1,246 @@
+@charset 'utf-8'; //font-family: "PingFang SC","Hiragino Sans GB","Microsoft YaHei", arial, sans-serif;
+html{font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+html,body{-webkit-user-select:none;user-select:none;}
+html,body,div,object,iframe,applet,object,h1,h2,h3,h4,h5,h6,p,blockquote,pre,address,dl,dt,dd,ol,ul,li,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;vertical-align:baseline;box-sizing: border-box;}
+a,i,em,span,input{box-sizing: border-box;font-style: normal;}
+a{text-decoration:none;-webkit-touch-callout:none;background-color:transparent}
+li{list-style:none}
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}
+audio,canvas,progress,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+[hidden],template{display:none}
+a:active,a:hover{outline:0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+h1{font-size:2em;margin:.67em 0}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-0.5em}
+sub{bottom:-0.25em}
+img{border:0;-webkit-touch-callout:none;}
+svg:not(:root){overflow:hidden}
+figure{margin:1em 40px}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+pre{overflow:auto}
+code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}
+a,button,input,optgroup,select,textarea{-webkit-tap-highlight-color:rgba(0,0,0,0);color:inherit;}
+button,input,optgroup,select,textarea{color:inherit;font:inherit;font-size: .28rem;margin:0;-webkit-appearance:none;outline:none;line-height:normal;border:1px solid #e5e5e5;}
+button{overflow:visible}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+input{line-height:normal}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+textarea::-webkit-input-placeholder,textarea:-moz-placeholder,textarea::-moz-placeholder,textarea:-ms-input-placeholder{
+    color:#d4d4d4;
+}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+textarea{overflow:auto}
+optgroup{font-weight:bold}
+table{border-collapse:collapse;border-spacing:0}
+td,th{padding:0}
+input::-webkit-input-placeholder{
+	color:#bebebe;
+}
+
+input::-moz-input-placeholder{
+	color:#bebebe;
+}
+
+input::-ms-input-placeholder{
+	color:#bebebe;
+}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background-color: #F5F5F5;
+}
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #555;
+}
+/*公共部分*/
+/*rem动态变化，375px的屏1rem=50px,即750的设计图，测量宽高/100rem
+全局为border-box盒模型
+*/
+html {
+  height: 100%;
+  font-size: 20px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  margin: 0 auto;
+  max-width: 750px;
+  font-size:.28rem;
+  color: #181818;
+  background-color: #fff;
+  font-weight: 500;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.clearfix,
+.clearfix:after,
+.clearfix:before {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.mb20 {
+  margin-bottom: 0.2rem;
+}
+
+.mb15 {
+  margin-bottom: 0.15rem;
+}
+.ml15 {
+  margin-left: 0.15rem;
+}
+.mr15 {
+  margin-right: 0.15rem;
+}
+/* 内容框，默认去掉头尾高度 */
+.container{
+    padding-top: .8rem;
+    padding-bottom: 1rem;
+}
+
+/* 单选框 */
+.icon-radio{
+    display: inline-block;
+    width: .32rem;
+    height: .32rem;
+    background: url(../images/icon-radio-off.png) no-repeat left/.32rem;
+    vertical-align: middle;
+}
+.icon-radio-on{
+    background: url(../images/icon-radio-on.png) no-repeat left/.32rem;
+}
+/* 复选框 */
+.icon-check{
+    display: inline-block;
+    width: .34rem;
+    height: .34rem;
+    background: url(../images/icon-check.png) no-repeat center/.34rem;
+    vertical-align: middle;
+}
+.icon-check-on{
+    background: url(../images/icon-check-on.png) no-repeat center/.34rem;
+}
+
+/*从右侧滑入*/
+.fadeRight-enter-active {
+  transition: all 1s;
+  animation: fadeIn 1s both;
+}
+.fadeRight-leave-active {
+  transition: all 1s;
+  transform: translateX(100%);
+}
+.fadeRight-enter,.fadeRight-leave-to{
+    transform: translateX(100%);
+}
+
+@keyframes fadeIn{
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+/*从底部滑入*/
+.fadeBottom-enter-active {
+  transition: all 1s;
+  animation: fadeInB 1s both;
+}
+.fadeBottom-leave-active {
+  transition: all 1s;
+  transform: translateY(100%);
+}
+.fadeBottom-enter,.fadeBottom-leave-to{
+    transform: translateY(100%);
+}
+
+@keyframes fadeInB{
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.loading{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -.63rem;
+    width: 1.26rem;
+    height: 1.26rem;
+    background: url(../images/loading_circle.gif) no-repeat center;
+}
+.no-result{
+	margin: 0 auto;
+	display: block;
+	width: 4.7rem;
+	height: 6rem;
+	background: url(../images/bg_no_result.png) no-repeat center bottom;
+	background-size: 4.7rem 3.43rem
+}
+
+@import '../../common/styles/mixin';
+#app .vux-header{
+	background-color: @header-background-color;
+	.vux-header-left,.vux-header-right{
+		color: @header-text-color;
+		font-size: .3rem;
+		a{
+			color: @header-text-color;
+		}
+		.left-arrow:before{
+			border-color: @header-text-color;
+		}
+		.vux-header-more:after{
+			font-size: 12px;
+		}
+		.btn-close{
+
+		}
+	}
+	.vux-header-title{
+		font-size: .34rem;
+	}
+  
+  
+}
